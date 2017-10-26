@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 		<!--Let browser know website is optimized for mobile-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 		<style>
 			#tweetBox {
 				min-height: 80vh;
@@ -21,6 +21,9 @@
 			}
 			h5, h6 {
 				display: inline-block;
+			}
+			.btn {
+				width: 100%;
 			}
 		</style>
 	</head>
@@ -37,7 +40,7 @@
 								<img src="{{ tweet.headshot_url }}" class="circle responsive-img z-depth-2">
 							</div>
 							<div class="col s10">
-								<h5>{{ tweet.username }}</h5>
+								<a href="https://twitter.com/{{ tweet.screenname }}"<h5>{{ tweet.username }}</h5></a>
 								<h6>@{{ tweet.screenname }}</h6>
 								<p>{{ tweet.tweet }}</p>
 								<small>{{ tweet.created_at }}</small>
@@ -50,7 +53,7 @@
 					<h4>Query A User's Timeline</h4>
 					<p> The application will query the specified user's timeline to retrieve a list of their recent tweets.
 							The user specified must be a public account. If the user is private or not real, the timeline will
-							display the default timeline for Salvador.</p>
+							display the default timeline which is Donald Trump.</p>
 					<form action="/" method="GET">
 						<div class="row">
 							<div class="input-field col m8 s12">
@@ -67,7 +70,7 @@
 						    <label>Amount of Tweets</label>
 							</div>
 							<div class="col s12">
-								<button class="btn waves-effect orange" type="submit">Send</button>
+								<button class="btn waves-effect" type="submit">Send</button>
 							</div>
 						</div>
 					</form>

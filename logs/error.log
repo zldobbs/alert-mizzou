@@ -863,3 +863,438 @@ the error log
 [Thu Oct 26 02:12:01.869380 2017] [wsgi:error] [pid 21712] [client 209.54.86.83:49676]   File "/var/www/MUA/MUA/MUA.py", line 21, in get_tweets, referer: http://www.alertinmissourian.ml/?username=++&amount=5
 [Thu Oct 26 02:12:01.869382 2017] [wsgi:error] [pid 21712] [client 209.54.86.83:49676]     for t in tweets], referer: http://www.alertinmissourian.ml/?username=++&amount=5
 [Thu Oct 26 02:12:01.869383 2017] [wsgi:error] [pid 21712] [client 209.54.86.83:49676] AttributeError: 'Status' object has no attribute 'username', referer: http://www.alertinmissourian.ml/?username=++&amount=5
+[Thu Oct 26 07:51:56.963381 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420] [2017-10-26 07:51:56,957] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963841 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963847 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963850 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963859 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963861 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963863 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963865 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963867 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963869 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963871 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963873 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963875 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963877 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     return render_template('page.html', tweets=get_tweets(username, amount)), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963879 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963881 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963883 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963885 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963887 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963888 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963890 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4912, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963892 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420]     raise TwitterError(data['error']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:56.963894 2017] [wsgi:error] [pid 23429] [client 107.77.89.113:31420] TwitterError: Not authorized., referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851352 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379] [2017-10-26 07:51:59,849] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851385 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851399 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851402 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851404 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851406 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851408 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851410 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851411 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851413 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851415 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851417 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851419 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851421 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     return render_template('page.html', tweets=get_tweets(username, amount)), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851423 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851424 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851426 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851428 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851430 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851432 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851434 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4912, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851436 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379]     raise TwitterError(data['error']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:51:59.851440 2017] [wsgi:error] [pid 23207] [client 107.77.89.113:53379] TwitterError: Not authorized., referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381657 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877] [2017-10-26 07:52:04,380] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381693 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381695 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381698 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381700 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381703 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381705 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381714 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381716 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381718 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381720 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381722 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381724 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381726 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     return render_template('page.html', tweets=get_tweets(username, amount)), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381728 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381730 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381732 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381733 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381735 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381737 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381751 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4912, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381753 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877]     raise TwitterError(data['error']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:04.381755 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:32877] TwitterError: Not authorized., referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 07:52:34.118041 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328] [2017-10-26 07:52:34,115] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118092 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118095 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118098 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118101 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118103 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118106 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118108 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118111 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118113 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118115 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118117 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118119 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118121 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     return render_template('page.html', tweets=get_tweets(username, amount)), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118124 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118126 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118139 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118142 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118144 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118146 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118148 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4912, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118150 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328]     raise TwitterError(data['error']), referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:52:34.118152 2017] [wsgi:error] [pid 23209] [client 107.77.89.113:36328] TwitterError: Not authorized., referer: http://www.alertinmissourian.ml/?username=Zachdobbs&amount=15
+[Thu Oct 26 07:57:37.340108 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731] [2017-10-26 07:57:37,339] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340144 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340147 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340150 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340152 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340155 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340157 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340159 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340161 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340164 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340166 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340178 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340181 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340183 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     return render_template('page.html', tweets=get_tweets(username, amount)), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340184 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340186 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340188 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340190 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340192 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340194 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340196 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4914, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340198 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731]     raise TwitterError(data['errors']), referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 07:57:37.340200 2017] [wsgi:error] [pid 23208] [client 107.77.89.113:27731] TwitterError: [{u'message': u'Sorry, that page does not exist.', u'code': 34}], referer: http://www.alertinmissourian.ml/?username=Mizzou&amount=15
+[Thu Oct 26 08:12:25.180403 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544] [2017-10-26 08:12:25,180] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180441 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180444 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180447 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180449 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180452 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180454 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180467 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180469 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180471 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180473 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180475 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180477 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180479 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     return render_template('page.html', tweets=get_tweets(username, amount)), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180481 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180483 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180485 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180487 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180489 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180491 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180492 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4912, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180494 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544]     raise TwitterError(data['error']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:12:25.180496 2017] [wsgi:error] [pid 23429] [client 128.206.251.107:35544] TwitterError: Not authorized., referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593611 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289] [2017-10-26 08:14:42,593] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593642 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593646 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593648 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593651 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593665 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593667 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593669 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593671 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593673 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593675 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593677 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593679 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593681 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     # route for groupme bot, disabled for now, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593683 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593685 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593687 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593689 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593690 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593692 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593694 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4912, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593696 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289]     raise TwitterError(data['error']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:14:42.593698 2017] [wsgi:error] [pid 23207] [client 128.206.251.107:22289] TwitterError: Not authorized., referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429056 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429] [2017-10-26 08:16:59,428] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429088 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429092 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429105 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429107 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429109 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429115 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429117 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429119 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429121 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429123 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429125 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429127 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429129 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     return render_template('page.html', tweets=get_tweets(username, amount)), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429131 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429133 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429147 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429149 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429151 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429153 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429155 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4912, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429156 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429]     raise TwitterError(data['error']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:16:59.429158 2017] [wsgi:error] [pid 23208] [client 128.206.251.107:13429] TwitterError: Not authorized., referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740094 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194] [2017-10-26 08:18:15,738] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740126 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740129 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740131 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740134 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740136 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740139 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740141 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740143 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740145 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740147 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740150 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740152 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/var/www/MUA/MUA/MUA.py", line 49, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740154 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     if request.args.get('amount'):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740156 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/var/www/MUA/MUA/MUA.py", line 16, in get_tweets, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740158 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     tweets = twitter_api.GetUserTimeline(screen_name=username, count=num), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740160 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 799, in GetUserTimeline, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740162 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740164 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740166 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740168 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4912, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740180 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194]     raise TwitterError(data['error']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:18:15.740183 2017] [wsgi:error] [pid 23206] [client 128.206.251.107:41194] TwitterError: Not authorized., referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:19:10.031044 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795] [2017-10-26 08:19:10,030] ERROR in app: Exception on / [GET]
+[Thu Oct 26 08:19:10.031079 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795] Traceback (most recent call last):
+[Thu Oct 26 08:19:10.031109 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+[Thu Oct 26 08:19:10.031112 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]     response = self.full_dispatch_request()
+[Thu Oct 26 08:19:10.031114 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+[Thu Oct 26 08:19:10.031117 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]     rv = self.handle_user_exception(e)
+[Thu Oct 26 08:19:10.031119 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+[Thu Oct 26 08:19:10.031121 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]     reraise(exc_type, exc_value, tb)
+[Thu Oct 26 08:19:10.031123 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+[Thu Oct 26 08:19:10.031125 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]     rv = self.dispatch_request()
+[Thu Oct 26 08:19:10.031127 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+[Thu Oct 26 08:19:10.031129 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]     return self.view_functions[rule.endpoint](**req.view_args)
+[Thu Oct 26 08:19:10.031131 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]   File "/var/www/MUA/MUA/MUA.py", line 51, in page
+[Thu Oct 26 08:19:10.031133 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795]     return render_template('page.html', tweets=get_tweets(username, amount))
+[Thu Oct 26 08:19:10.031135 2017] [wsgi:error] [pid 23869] [client 128.206.251.107:43795] UnboundLocalError: local variable 'amount' referenced before assignment
+[Thu Oct 26 08:19:10.566268 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424] [2017-10-26 08:19:10,565] ERROR in app: Exception on / [GET]
+[Thu Oct 26 08:19:10.566295 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424] Traceback (most recent call last):
+[Thu Oct 26 08:19:10.566299 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+[Thu Oct 26 08:19:10.566301 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]     response = self.full_dispatch_request()
+[Thu Oct 26 08:19:10.566304 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+[Thu Oct 26 08:19:10.566306 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]     rv = self.handle_user_exception(e)
+[Thu Oct 26 08:19:10.566309 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+[Thu Oct 26 08:19:10.566315 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]     reraise(exc_type, exc_value, tb)
+[Thu Oct 26 08:19:10.566316 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+[Thu Oct 26 08:19:10.566325 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]     rv = self.dispatch_request()
+[Thu Oct 26 08:19:10.566327 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+[Thu Oct 26 08:19:10.566329 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]     return self.view_functions[rule.endpoint](**req.view_args)
+[Thu Oct 26 08:19:10.566330 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]   File "/var/www/MUA/MUA/MUA.py", line 51, in page
+[Thu Oct 26 08:19:10.566332 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424]     return render_template('page.html', tweets=get_tweets(username, amount))
+[Thu Oct 26 08:19:10.566334 2017] [wsgi:error] [pid 23865] [client 128.206.251.107:41424] UnboundLocalError: local variable 'amount' referenced before assignment
+[Thu Oct 26 08:19:10.749278 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554] [2017-10-26 08:19:10,748] ERROR in app: Exception on / [GET]
+[Thu Oct 26 08:19:10.749305 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554] Traceback (most recent call last):
+[Thu Oct 26 08:19:10.749307 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+[Thu Oct 26 08:19:10.749310 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]     response = self.full_dispatch_request()
+[Thu Oct 26 08:19:10.749312 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+[Thu Oct 26 08:19:10.749314 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]     rv = self.handle_user_exception(e)
+[Thu Oct 26 08:19:10.749316 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+[Thu Oct 26 08:19:10.749318 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]     reraise(exc_type, exc_value, tb)
+[Thu Oct 26 08:19:10.749320 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+[Thu Oct 26 08:19:10.749322 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]     rv = self.dispatch_request()
+[Thu Oct 26 08:19:10.749323 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+[Thu Oct 26 08:19:10.749325 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]     return self.view_functions[rule.endpoint](**req.view_args)
+[Thu Oct 26 08:19:10.749327 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]   File "/var/www/MUA/MUA/MUA.py", line 51, in page
+[Thu Oct 26 08:19:10.749328 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554]     return render_template('page.html', tweets=get_tweets(username, amount))
+[Thu Oct 26 08:19:10.749330 2017] [wsgi:error] [pid 23868] [client 128.206.251.107:54554] UnboundLocalError: local variable 'amount' referenced before assignment
+[Thu Oct 26 08:19:14.165755 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554] [2017-10-26 08:19:14,165] ERROR in app: Exception on / [GET]
+[Thu Oct 26 08:19:14.165782 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554] Traceback (most recent call last):
+[Thu Oct 26 08:19:14.165785 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app
+[Thu Oct 26 08:19:14.165787 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]     response = self.full_dispatch_request()
+[Thu Oct 26 08:19:14.165789 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+[Thu Oct 26 08:19:14.165797 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]     rv = self.handle_user_exception(e)
+[Thu Oct 26 08:19:14.165799 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception
+[Thu Oct 26 08:19:14.165801 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]     reraise(exc_type, exc_value, tb)
+[Thu Oct 26 08:19:14.165802 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+[Thu Oct 26 08:19:14.165804 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]     rv = self.dispatch_request()
+[Thu Oct 26 08:19:14.165806 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request
+[Thu Oct 26 08:19:14.165808 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]     return self.view_functions[rule.endpoint](**req.view_args)
+[Thu Oct 26 08:19:14.165809 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]   File "/var/www/MUA/MUA/MUA.py", line 51, in page
+[Thu Oct 26 08:19:14.165811 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554]     return render_template('page.html', tweets=get_tweets(username, amount))
+[Thu Oct 26 08:19:14.165813 2017] [wsgi:error] [pid 23866] [client 128.206.251.107:61554] UnboundLocalError: local variable 'amount' referenced before assignment
+[Thu Oct 26 08:24:36.894896 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408] mod_wsgi (pid=24008): Target WSGI script '/var/www/MUA/mua.wsgi' cannot be loaded as Python module., referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.894928 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408] mod_wsgi (pid=24008): Exception occurred processing WSGI script '/var/www/MUA/mua.wsgi'., referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.894946 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.894959 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408]   File "/var/www/MUA/mua.wsgi", line 8, in <module>, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.895001 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408]     from MUA import app as application, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.895011 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408]   File "/var/www/MUA/MUA/__init__.py", line 1, in <module>, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.895032 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408]     from .MUA import app, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.895057 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408]   File "/var/www/MUA/MUA/MUA.py", line 46, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.895062 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408]     if !twitter.TwitterHTTPError, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.895065 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408]        ^, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:24:36.895067 2017] [wsgi:error] [pid 24008] [client 128.206.251.107:52408] SyntaxError: invalid syntax, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971691 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422] [2017-10-26 08:27:15,970] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971739 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971753 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971755 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971757 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971759 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971761 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971763 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971765 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971767 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971769 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971771 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971773 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]   File "/var/www/MUA/MUA/MUA.py", line 48, in page, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971775 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422]     except twitter.TwitterHTTPError:, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:27:15.971776 2017] [wsgi:error] [pid 24010] [client 128.206.251.107:60422] AttributeError: 'module' object has no attribute 'TwitterHTTPError', referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:43:18.894848 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593] mod_wsgi (pid=24671): Target WSGI script '/var/www/MUA/mua.wsgi' cannot be loaded as Python module., referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.894881 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593] mod_wsgi (pid=24671): Exception occurred processing WSGI script '/var/www/MUA/mua.wsgi'., referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.894899 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.894914 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593]   File "/var/www/MUA/mua.wsgi", line 8, in <module>, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.894951 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593]     from MUA import app as application, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.894969 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593]   File "/var/www/MUA/MUA/__init__.py", line 1, in <module>, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.894990 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593]     from .MUA import app, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.895021 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593]   File "/var/www/MUA/MUA/MUA.py", line 49, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.895026 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593]     if e.message == 'Not authorized.', referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.895028 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593]                                     ^, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:43:18.895031 2017] [wsgi:error] [pid 24671] [client 128.206.251.107:48593] SyntaxError: invalid syntax, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288563 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906] [2017-10-26 08:46:23,287] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288611 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288614 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288616 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288619 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288621 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288623 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288626 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288628 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288630 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288632 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288634 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288636 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]   File "/var/www/MUA/MUA/MUA.py", line 50, in page, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288638 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906]     if (r.status_code == 200):, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:23.288650 2017] [wsgi:error] [pid 24674] [client 128.206.251.107:21906] UnboundLocalError: local variable 'r' referenced before assignment, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680587 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374] [2017-10-26 08:46:51,679] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680637 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680640 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680642 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680644 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680647 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680649 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680651 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680653 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680655 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680657 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680670 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680672 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]   File "/var/www/MUA/MUA/MUA.py", line 50, in page, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680674 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374]     if (r.status_code == 200):, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:46:51.680675 2017] [wsgi:error] [pid 24672] [client 128.206.251.107:58374] AttributeError: 'int' object has no attribute 'status_code', referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.428948 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618] [2017-10-26 08:47:27,427] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.428992 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.428996 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429009 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429011 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429013 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429015 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429017 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429019 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429021 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429023 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429025 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429026 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/var/www/MUA/MUA/MUA.py", line 45, in page, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429028 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     r = twitter_api.GetUser(request.args.get('username')), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429030 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 2928, in GetUser, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429032 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429034 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429036 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429038 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4914, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429040 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618]     raise TwitterError(data['errors']), referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:47:27.429042 2017] [wsgi:error] [pid 24673] [client 128.206.251.107:24618] TwitterError: [{u'message': u'User not found.', u'code': 50}], referer: http://www.alertinmissourian.ml/?username=ho&amount=5
+[Thu Oct 26 08:48:18.186846 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686] [2017-10-26 08:48:18,185] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186900 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186903 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186905 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186907 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186909 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186911 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186913 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186915 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186917 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186919 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186921 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186923 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/var/www/MUA/MUA/MUA.py", line 45, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186925 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     r = twitter_api.GetUser(request.args.get('username')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186927 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 2928, in GetUser, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186929 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186931 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186933 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186935 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4914, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186937 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686]     raise TwitterError(data['errors']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:48:18.186939 2017] [wsgi:error] [pid 24808] [client 128.206.251.107:22686] TwitterError: [{u'message': u'User not found.', u'code': 50}], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154163 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602] [2017-10-26 08:49:26,152] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154196 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154199 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154202 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154204 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154206 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154208 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154210 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154212 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154214 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154216 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154218 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154220 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]   File "/var/www/MUA/MUA/MUA.py", line 45, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154221 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]     r = request.twitter_api.GetUser(request.args.get('username')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154223 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]   File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 347, in __getattr__, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154225 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602]     return getattr(self._get_current_object(), name), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:26.154227 2017] [wsgi:error] [pid 24809] [client 128.206.251.107:45602] AttributeError: 'Request' object has no attribute 'twitter_api', referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877299 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753] [2017-10-26 08:49:55,875] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877339 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877342 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877345 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877356 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877359 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877361 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877363 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877365 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877367 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877368 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877371 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877372 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/var/www/MUA/MUA/MUA.py", line 45, in page, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877374 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     r = request(twitter_api.GetUser(request.args.get('username'))), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877376 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 2928, in GetUser, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877378 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877380 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877382 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877384 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4914, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877386 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753]     raise TwitterError(data['errors']), referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:49:55.877388 2017] [wsgi:error] [pid 24807] [client 128.206.251.107:40753] TwitterError: [{u'message': u'User not found.', u'code': 50}], referer: http://www.alertinmissourian.ml/
+[Thu Oct 26 08:52:52.613455 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908] [2017-10-26 08:52:52,611] ERROR in app: Exception on / [GET], referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613502 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908] Traceback (most recent call last):, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613505 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1982, in wsgi_app, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613519 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     response = self.full_dispatch_request(), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613521 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1614, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613523 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     rv = self.handle_user_exception(e), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613525 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1517, in handle_user_exception, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613527 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     reraise(exc_type, exc_value, tb), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613529 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1612, in full_dispatch_request, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613531 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     rv = self.dispatch_request(), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613533 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1598, in dispatch_request, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613535 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     return self.view_functions[rule.endpoint](**req.view_args), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613537 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/var/www/MUA/MUA/MUA.py", line 45, in page, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613539 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     username = '@realDonaldTrump', referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613541 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 2928, in GetUser, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613543 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     data = self._ParseAndCheckTwitter(resp.content.decode('utf-8')), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613545 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4894, in _ParseAndCheckTwitter, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613547 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     self._CheckForTwitterError(data), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613549 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]   File "/usr/local/lib/python2.7/dist-packages/twitter/api.py", line 4914, in _CheckForTwitterError, referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613551 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908]     raise TwitterError(data['errors']), referer: http://www.alertinmissourian.ml/?username=taco&amount=5
+[Thu Oct 26 08:52:52.613552 2017] [wsgi:error] [pid 24810] [client 128.206.251.107:19908] TwitterError: [{u'message': u'User not found.', u'code': 50}], referer: http://www.alertinmissourian.ml/?username=taco&amount=5

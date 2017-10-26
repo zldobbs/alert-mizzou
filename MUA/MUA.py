@@ -1,6 +1,6 @@
 # imports
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 import twitter, json, config
 
 # initiatilization
@@ -13,7 +13,10 @@ twitter_api = twitter.Api(consumer_key = config.twit['consumer_key'],
 
 # get the tweets
 def get_tweets(username, num):
-    tweets = twitter_api.GetUserTimeline(screen_name=username, count=num)
+    try:
+        tweets = twitter_api.GetUserTimeline(screen_name=username, count=num)
+    except twitter.error.TwitterError:
+        tweets = twitter_api.GetUserTimeline(screen_name='realDonaldTrump', count=10)
     return [{   'tweet': t.text,
                 'created_at': t.created_at,
                 'username': t.user.name,
@@ -39,7 +42,6 @@ def get_tweets(username, num):
 def page():
     # testing page with Donnie
     # send_message('hello!')
-    # default values to donnie trump and 10 tweets
     username = '@realDonaldTrump'
     amount = 10
     if request.args.get('username'):
