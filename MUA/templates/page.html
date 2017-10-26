@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Alert Mizzou</title>
+		<title>FlaskLine</title>
+		<!-- Materialize Setup -->
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<style>
+			#tweetBox {
+				min-height: 80vh;
+				max-height: 80vh;
+				overflow-y: scroll;
+				border-radius: 2%;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			h5, h6 {
+				display: inline-block;
+			}
+		</style>
 	</head>
-	
-	<body>
-		<h1>Throw it</h1>
+
+	<body class="grey darken-3 white-text">
+		<div class="container">
+			<h2 class="center-align">Welcome to the FlaskLine!</h2>
+			<div class="row">
+				<div class="col m6 s12 grey lighten-2 black-text z-depth-4" id="tweetBox">
+					<div class="row">
+						{% for tweet in tweets %}
+						<div>
+							<div class="col s2">
+								<img src="{{ tweet.headshot_url }}" class="circle responsive-img z-depth-2">
+							</div>
+							<div class="col s10">
+								<h5>{{ tweet.username }}</h5>
+								<h6>@{{ tweet.screenname }}</h6>
+								<p>{{ tweet.tweet }}</p>
+								<small>{{ tweet.created_at }}</small>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col m5 push-m1 s12">
+					<h4>Query A User's Timeline</h4>
+					<p> The application will query the specified user's timeline to retrieve a list of their recent tweets.
+							The user specified must be a public account. If the user is private or not real, the timeline will
+							display the default timeline for Salvador.</p>
+					<form action="/" method="GET">
+						<div class="row">
+							<div class="input-field col m8 s12">
+								<input placeholder="@realDonaldTrump" id="username" type="text" name="username" required>
+								<label for="username"></label>
+							</div>
+							<div class="input-field col m4 s12">
+						    <select name="amount">
+						      <option value="5" selected>5</option>
+						      <option value="10">10</option>
+						      <option value="15">15</option>
+						      <option value="20">20</option>
+						    </select>
+						    <label>Amount of Tweets</label>
+							</div>
+							<div class="col s12">
+								<button class="btn waves-effect orange" type="submit">Send</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('select').material_select();
+			});
+		</script>
 	</body>
 </html>
